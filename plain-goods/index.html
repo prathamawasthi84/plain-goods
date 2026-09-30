@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plain Goods</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<header>
+ <div class="wrap bar">
+  <a class="logo" href="#top">Plain Goods</a>
+  <nav id="nav" aria-label="Main">
+   <button class="nl" id="shopMenu" aria-expanded="false" aria-controls="mega">Shop</button>
+   <a class="nl" href="#about">About</a>
+   <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+   <button class="menu-toggle" id="menuToggle" aria-expanded="false">Menu</button>
+  </nav>
+ </div>
+ <div class="mega" id="mega"><div class="wrap mega-grid" id="megaGrid"></div></div>
+</header>
+
+<main id="top">
+ <div class="hero">
+  <div class="shape s1" aria-hidden="true"></div>
+  <div class="shape s2" aria-hidden="true"></div>
+  <div class="shape s3" aria-hidden="true"></div>
+  <div class="shape s4" aria-hidden="true"></div>
+  <div class="wrap">
+   <div class="hero-card">
+    <h1>Ceramics, textiles and kitchen tools.</h1>
+    <p>Plates, throws and boards picked to be used every day. Choose one and check out in two taps.</p>
+    <div class="btns"><a class="btn" href="#shop">Shop all</a><a class="btn alt" href="#about">About us</a></div>
+   </div>
+  </div>
+ </div>
+
+ <section class="info" aria-label="Delivery and returns">
+  <div class="wrap info-grid">
+   <div><h3>Delivery</h3><p>Orders over &#8377;2,999 ship free. Smaller orders pay a flat &#8377;99.</p></div>
+   <div><h3>Returns</h3><p>Not right? Send it back within 7 days for a refund.</p></div>
+   <div><h3>Care</h3><p>Every product page says how to wash and store it.</p></div>
+  </div>
+ </section>
+
+ <section id="shop">
+  <div class="wrap">
+   <h2>Shop</h2>
+   <div class="filters" id="filters"></div>
+   <div class="grid" id="grid"></div>
+  </div>
+ </section>
+
+ <section class="about" id="about">
+  <div class="wrap">
+   <h2>About</h2>
+   <p>Plain Goods sells a short list of things for the home. We keep the range small so each piece can be chosen well: simple shapes, solid materials and colours that sit well together. If an object is not useful every week, it does not make the list.</p>
+  </div>
+ </section>
+</main>
+
+<footer>
+ <div class="wrap foot">
+  <span>&copy; <span id="yr"></span> Plain Goods</span>
+  
+ </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+
+<aside class="drawer" id="drawer" aria-label="Cart" aria-hidden="true">
+ <div class="dh"><h2>Your cart</h2><button class="x" id="closeCart">Close</button></div>
+ <div class="items" id="items"></div>
+ <div class="df"><div class="tot"><span>Total</span><span id="total"></span></div><button class="btn block" id="checkout">Checkout</button></div>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true"><button class="x mx" id="closeModal">Close</button><div id="modalBody"></div></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="assets/js/products.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
